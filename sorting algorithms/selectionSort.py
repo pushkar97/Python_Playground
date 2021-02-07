@@ -3,7 +3,7 @@ def selectionSort(unsortedList):
         min = i
         for j  in range(i + 1, len(unsortedList)):
             min = j if unsortedList[min] > unsortedList[j] else min
-        unsortedList[i],unsortedList[min] = unsortedList[min],unsortedList[i]
+        unsortedList[i], unsortedList[min] = unsortedList[min], unsortedList[i]
     return unsortedList
 
 if __name__ == "__main__":

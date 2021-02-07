@@ -8,11 +8,11 @@ def binary_search(list, value):
         elif(list[mid_point] > value):
             return binary_search(list[:mid_point], value)
     except Exception as e:
-        print(e)
+        return -1
     
 
 if(__name__ == '__main__'):
-    myList = sorted('I Love Coding')
+    myList = sorted([1,4,3,6])
     print(myList)
-    value = 'L'
+    value = 6
     print(binary_search(myList, value))
