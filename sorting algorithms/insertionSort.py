@@ -3,7 +3,7 @@ def insertionSort(unsortedList):
         j = i
         while(j > 0 and unsortedList[j] < unsortedList[j - 1]):
             unsortedList[j], unsortedList[j - 1] = unsortedList[j - 1], unsortedList[j]
-            j = j - 1
+            j -= 1
     return unsortedList
 
 if __name__ == "__main__":
