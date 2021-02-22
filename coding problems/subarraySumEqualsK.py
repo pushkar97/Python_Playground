@@ -14,11 +14,10 @@ def solution1(list, num):
 def solution2(list, num):
     sumMap = {0:1}
     output = 0
-    for i in range(len(list)):
-        if sumMap.get(sum(list[: i + 1]) - num):
-            output += 1
-        sumMap[sum(list[: i + 1])] = 1
+    for i in range(1, len(list) + 1):
+        output += sumMap.get(sum(list[:i]) - num, 0)
+        sumMap[sum(list[:i])] = sumMap.get(sum(list[:i]), 0) + 1
     return output
 
 if __name__ == "__main__":
-    print(f"subarray count with sum given to number : {solution1([1,-2,3,4,-5], 2)}")
+    print(f"subarray count with sum given to number : {solution1([1,-1, 0], 0)}")
